@@ -107,7 +107,6 @@ let h=`<h2>${NAMES[g]}</h2><div class="g">`+sel("con","Konstruktion (C)",cOpt,s.
 if(g=="A"||g=="C")h+=sel("dir","Richtung (D)",(g=="C"?DIRC:DIR).map(x=>[x[0],x[0]+" ("+f(x[1])+")"]),s.dir);
 else h+=sel("conn","Verbindung / Grip (S)",connOpts().map(x=>[x[0],x[0]+" ("+f(x[1])+")"]),s.conn);
 if(g=="C")h+=sel("mode","Positionstabelle",[["A","Gruppe A (fliegt)"],["B","Gruppe B (bleibt auf Formation)"]],s.mode);
-h+=sel("p1","Position 1",pl.map(x=>[x.c,x.n+" – "+x.c+" ("+f(x.v)+")"]),s.p1)+sel("p2","Position 2 (optional)",pl.map(x=>[x.c,x.n+" – 2"+x.c+" ("+f(x.v2)+")"]),s.p2);
 if(g=="C")h+=sel("rb","Rotation Konstruktion (R)",rotOpts().map(x=>[x[0],x[0]+" ("+f(x[1])+")"]),s.rb);
 const ro=g=="C"?RC:rotOpts();
 h+=sel("rot",g=="A"||g=="C"?"Rotation in der Luft (T)":"Rotation Konstruktion (R)",ro.map(x=>[x[0],x[0]+" ("+f(x[1])+")"]),s.rot)+`</div>`;
